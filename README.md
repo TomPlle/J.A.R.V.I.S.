@@ -28,6 +28,7 @@ Une application d'assistant vocal personnel capable d'interagir en langage natur
 
 ## Architecture
 
+```text
 jarvis/
 ├── core/
 │   ├── listener.py       # hotword + STT
@@ -41,3 +42,4 @@ jarvis/
 ├── config/
 │   └── profiles.yaml
 └── main.py
+'''
