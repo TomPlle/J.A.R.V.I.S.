@@ -25,3 +25,19 @@ Une application d'assistant vocal personnel capable d'interagir en langage natur
 ## 🎨 Pistes d'évolution (pour aller plus loin)
 * **Exécution 100% locale :** Remplacer les API cloud par des modèles open-source exécutés en local (via **Ollama** pour le LLM et **Whisper** pour la voix) pour un assistant totalement privé et hors-ligne.
 * **Interface visuelle holographique :** Créer une interface graphique futuriste (style HUD d'Ironman en HTML/CSS/Canvas) qui s'affiche sur un second écran pour visualiser l'activité de l'assistant en direct.
+
+## Architecture
+
+jarvis/
+├── core/
+│   ├── listener.py       # hotword + STT
+│   ├── speaker.py        # TTS
+│   ├── agent.py          # LLM + orchestration des tools
+│   └── intent_router.py  # dispatch function calling
+├── tools/
+│   ├── web_search.py
+│   ├── system_control.py # psutil / subprocess
+│   └── profiles.py       # bascule Travail/Jeu
+├── config/
+│   └── profiles.yaml
+└── main.py
